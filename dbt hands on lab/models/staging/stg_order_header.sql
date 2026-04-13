@@ -8,10 +8,9 @@ cleaned as (
         truck_id,
         order_ts,
         customer_id,
-        order_amount,
-        order_discount,
-        order_tax,
-        order_net_total,
+        order_discount_amount as order_discount,
+        order_tax_amount as order_tax,
+        order_total as order_net_total,
         _fivetran_synced as loaded_at
     from source
     where order_id is not null

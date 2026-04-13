@@ -8,7 +8,7 @@ cleaned as (
         menu_item_id,
         quantity,
         price,
-        line_total,
+        quantity * price as line_total,
         _fivetran_synced as loaded_at
     from source
     where order_id is not null

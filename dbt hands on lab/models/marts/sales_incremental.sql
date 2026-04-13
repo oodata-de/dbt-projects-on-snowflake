@@ -14,7 +14,7 @@ with order_details as (
         od.menu_item_id,
         od.quantity,
         od.price,
-        od.line_total,
+        od.quantity * od.price as line_total,
         oh.truck_id,
         oh.order_ts,
         m.menu_type,
