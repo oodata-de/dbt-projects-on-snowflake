@@ -31,6 +31,6 @@ METRICS(
         WITH SYNONYMS = ('revenue', 'total sales', 'sales amount'),
     ORDER_ITEMS.TOTAL_ITEMS_SOLD as SUM(QUANTITY)
         WITH SYNONYMS = ('items sold', 'unit sales', 'quantity sold'),
-    ORDER_ITEMS.TOTAL_ORDERS as COUNT_DISTINCT(ORDER_ID)
+    ORDER_ITEMS.TOTAL_ORDERS as COUNT(DISTINCT ORDER_ID)
         WITH SYNONYMS = ('number of orders', 'order count', 'orders')
 )
