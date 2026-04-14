@@ -18,9 +18,9 @@ FACTS(
 )
 
 DIMENSIONS(
-    ORDERS.ORDER_TS             as ORDER_DATE,
+    ORDERS.ORDER_TS             as ORDER_TS,
     ORDERS.TRUCK_ID             as TRUCK_ID,
-    MENU.TRUCK_BRAND_NAME       as BRAND,
+    MENU.TRUCK_BRAND_NAME       as TRUCK_BRAND_NAME,
     MENU.MENU_TYPE              as MENU_TYPE,
     MENU.ITEM_CATEGORY          as ITEM_CATEGORY,
     MENU.ITEM_NAME              as ITEM_NAME
