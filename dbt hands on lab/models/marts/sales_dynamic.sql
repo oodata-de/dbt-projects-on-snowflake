@@ -14,7 +14,7 @@ with order_details as (
         od.menu_item_id,
         od.quantity,
         od.price,
-        od.line_total,
+        od.quantity * od.price as line_total,
         oh.truck_id,
         oh.order_ts,
         m.menu_type,
@@ -33,7 +33,7 @@ select
     count(distinct order_id) as orders_count,
     sum(quantity) as items_sold,
     sum(line_total) as revenue,
-    avg(line_total) as avg_order_value,
+    avg(line_total) as avg_line_value,
     current_timestamp() as last_updated
 from order_details
 where truck_brand_name is not null

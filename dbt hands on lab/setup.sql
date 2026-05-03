@@ -176,6 +176,11 @@ GRANT CREATE VIEW ON SCHEMA tasty_bytes_dbt_db.staging TO ROLE dbt_prod_role;
 GRANT CREATE VIEW ON SCHEMA tasty_bytes_dbt_db.marts TO ROLE dbt_developer_role;
 GRANT CREATE VIEW ON SCHEMA tasty_bytes_dbt_db.marts TO ROLE dbt_prod_role;
 
+
+GRANT CREATE DYNAMIC TABLE ON SCHEMA TASTY_BYTES_DBT_DB.DEV_ANALYTICS TO ROLE DBT_DEVELOPER_ROLE;
+GRANT CREATE DYNAMIC TABLE ON SCHEMA TASTY_BYTES_DBT_DB.DEV_ANALYTICS TO ROLE DBT_PROD_ROLE;
+
+
 -- =====================================================
 -- 5. CREATE SAMPLE DATA TABLES 
 -- =====================================================
@@ -241,9 +246,9 @@ INSERT INTO raw_pos_menu VALUES
 -- =====================================================
 -- Replace 'YOUR_USERNAME' with your actual Snowflake username
 
-GRANT ROLE dbt_developer_role TO USER YOUR_USERNAME;
-GRANT ROLE analyst_role TO USER YOUR_USERNAME;
-GRANT ROLE finance_role TO USER YOUR_USERNAME;
+GRANT ROLE dbt_developer_role TO USER decloud7;
+GRANT ROLE analyst_role TO USER decloud7;
+GRANT ROLE finance_role TO USER decloud7;
 
 -- =====================================================
 -- 7. VERIFICATION QUERIES
